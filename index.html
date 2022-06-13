@@ -20,6 +20,38 @@
             .carousel-control-next-icon {
                 background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
             }
+
+            .horizontal-scroll-wrapper {
+                position: relative;
+                display: block;
+                top: 0;
+                left: 0;
+                width: calc(250px + 1px);
+                height: 100vw;
+                margin: 0;
+                padding-top: 1px;
+                background: #abc;
+                overflow-y: auto;
+                overflow-x: hidden;
+                transform: rotate(-90deg) translateY(-250px);
+                transform-origin: right top;
+            }
+            .horizontal-scroll-wrapper > div {
+                display: block;
+                padding: 5px;
+                background: #cab;
+                transform: rotate(90deg);
+                transform-origin: right top;
+            }
+
+            .squares {
+                padding: 250px 0 0 0;
+            }
+            .squares > div {
+                width: 250px;
+                height: 250px;
+                margin: 10px 0;
+            }
         </style>
     </head>
     <body>
@@ -42,16 +74,21 @@
                     <div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
                         <h3 class="my-5 text-center">Dónde y cuándo</h3>
                         <p class="lead">
-                            La fiesta tiene lugar la segunda semana de julio cada año, con una duración de 7 días. Por lo general comienza el 10 u 11 de Julio. Tiene lugar en la localidad de La Tirana, ubicada en la comuna de Pozo Almonte, región de Tarapacá, Chile. Allí, más de 250 feligreses se reúnen, para celebrar a la patrona de Chile, la Virgen del Carmen.
+                            La fiesta tiene lugar la segunda semana de julio cada año, con una duración de 7 días. Por lo general comienza el 10 u 11 de Julio. Tiene lugar en la localidad de La Tirana, ubicada en la comuna de Pozo Almonte,
+                            región de Tarapacá, Chile. Allí, más de 250 feligreses se reúnen, para celebrar a la patrona de Chile, la Virgen del Carmen.
                         </p>
                     </div>
 
                     <div class="col-sm-12 col-md-10 col-lg-8 mx-auto my-5">
                         <svg class="w-100" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg" focusable="false">
-                            <rect width="100%" height="100%" fill="#ccc
-                            " />
+                            <rect
+                                width="100%"
+                                height="100%"
+                                fill="#ccc
+                            "
+                            />
 
-                            <image width="100%" height="100%" xlink:href="img/mapa.png"/>
+                            <image width="100%" height="100%" xlink:href="img/mapa.png" />
                         </svg>
                     </div>
                 </div>
@@ -98,7 +135,8 @@
                                 <div class="text-md-start">
                                     <h4>PASTORA</h4>
                                     <p class="text-black-50">
-                                        Visten el axso, túnica hecha con ponchitos de variados colores y aguayos adornados con cucharas de plata boliviana que prenden al pecho. Van cubiertas, con un phanta, adornado con lentejuelas. Llevan un cinturón de Iana trenzada del que cuelgan una bolsa repleta de monedas antiguas. Bailan en círculo, con pasitos cortos y bornean unas guaracas simulando la faena de agrupar las ovejas.
+                                        Visten el axso, túnica hecha con ponchitos de variados colores y aguayos adornados con cucharas de plata boliviana que prenden al pecho. Van cubiertas, con un phanta, adornado con lentejuelas. Llevan
+                                        un cinturón de Iana trenzada del que cuelgan una bolsa repleta de monedas antiguas. Bailan en círculo, con pasitos cortos y bornean unas guaracas simulando la faena de agrupar las ovejas.
                                     </p>
                                 </div>
                             </div>
@@ -127,7 +165,8 @@
                                 <div class="text-md-start">
                                     <h4>GITANAS</h4>
                                     <p class="text-black-50">
-                                        Los gitanos visten trajes convencionales, con vistosos pañuelos amarrados a la cabeza. Bailan en rueda. Avanzan y retroceden dando vueltas sobre ellos mismos, con rápidos movimientos. Las gitanas acompañan los giros con toques de pandereta que llevan adornadas con profusión de cintas multicolores.
+                                        Los gitanos visten trajes convencionales, con vistosos pañuelos amarrados a la cabeza. Bailan en rueda. Avanzan y retroceden dando vueltas sobre ellos mismos, con rápidos movimientos. Las gitanas
+                                        acompañan los giros con toques de pandereta que llevan adornadas con profusión de cintas multicolores.
                                     </p>
                                 </div>
                             </div>
@@ -155,10 +194,12 @@
                                 <div class="text-md-start">
                                     <h4>DIABLO</h4>
                                     <p class="text-black-50">
-                                        Representa la capacidad de la Virgen de poder tener a los demonios bailando para ella. Es una figura que puede generar el mal o el bien, que llegó en los 60 desde Bolivia y que puede dirigir la Tirana al son de las tradiciones andinas y cristianas.
+                                        Representa la capacidad de la Virgen de poder tener a los demonios bailando para ella. Es una figura que puede generar el mal o el bien, que llegó en los 60 desde Bolivia y que puede dirigir la Tirana
+                                        al son de las tradiciones andinas y cristianas.
                                     </p>
                                 </div>
                             </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -167,7 +208,18 @@
                 <div class="row g-0">
                     <div class="mt-5 mb-3 col-12 mx-auto">
                         <h3 class="my-5 text-center">Origen e Historia</h3>
-                        <img src="img/origen.png" class="w-100"/>
+                        <div style="max-height: 200px; overlfow-y: hidden;">
+                            <div class="horizontal-scroll-wrapper squares">
+                                <div>item 1</div>
+                                <div>item 2</div>
+                                <div>item 3</div>
+                                <div>item 4</div>
+                                <div>item 5</div>
+                                <div>item 6</div>
+                                <div>item 7</div>
+                                <div>item 8</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
